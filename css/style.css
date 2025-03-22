@@ -21,10 +21,21 @@ body {
 
 /* RESPONSIVE INTESTAZIONE */
 
-/* Cellulari o schermi piccoli */
-@media (max-width: 500px) {
+/* Tablet o schermi medi */
+@media (max-width: 1024px) {
     body {
-        font-size: 1vw;
+        font-size: 1.5vw;
+    }
+    .intestazione {
+        margin: 2rem;
+        padding: 1rem;
+    }
+}
+
+/* Cellulari o schermi piccoli */
+@media (max-width: 600px) {
+    body {
+        font-size: 2.5vw;
     }
     .intestazione {
         margin: 1rem;
@@ -50,10 +61,18 @@ body {
 
 /* RESPONSIVE LINK */
 
-/* Cellulari o schermi piccoli */
-@media (max-width: 500px) {
+/* Tablet o schermi medi */
+@media (max-width: 1024px) {
     .intestazione p {
-        font-size: 1vw; 
+        font-size: 12vw; 
+        padding-left: 2vw; 
+    }
+}
+
+/* Cellulari o schermi piccoli */
+@media (max-width: 600px) {
+    .intestazione p {
+        font-size: 15vw; 
         padding-left: 5vw; 
     }
 }
@@ -74,12 +93,21 @@ body {
 
 /* RESPONSIVE MENU DI NAVIGAZIONE */
 
+/* Tablet o schermi medi */
+@media (max-width: 1024px) {
+    .intestazione nav ul {
+        gap: 5vw; 
+        font-size: 4vw; 
+        padding-right: 10vw; 
+    }
+}
+
 /* Cellulari o schermi piccoli */
-@media (max-width: 500px) {
+@media (max-width: 600px) {
     .intestazione nav ul {
         flex-direction: column; 
         gap: 6vw;
-        font-size: 1vw; 
+        font-size: 5vw; 
         padding-right: 0; 
     }
 }
@@ -115,7 +143,7 @@ body {
     border-radius: 50%;
     background-color: transparent;
     position: absolute;
-    right: 8vw; /* Allineata a destra */
+    right: 6vw; /* Allineata a destra */
     cursor: pointer;
     transition: border-color 0.3s, background-color 0.3s;
     margin-right: 10vw;
@@ -128,7 +156,7 @@ body {
     width: 1vw;
     height: 0.20vw;
     background-color: #BDC7FF;
-    top: 2.9vw;
+    top: 2.8vw;
     left: 1.7vw;
     transform: rotate(60deg);
     transition: background-color 0.3s;
@@ -144,8 +172,25 @@ body {
 
 /* RESPONSIVE LENTE DI INGRANDIMENTO*/
 
+/* Tablet o schermi medi */
+@media (max-width: 1024px) {
+    .lente {
+        width: 3.5vw;
+        height: 3.5vw;
+        border-width: 0.3vw;
+        right: 5vw;
+    }
+    
+    .lente::after {
+        width: 1.2vw;
+        height: 0.25vw;
+        top: 3.6vw;
+        left: 2.2vw;
+    }
+}
+
 /* Cellulari o schermi piccoli */
-@media (max-width: 500px) {
+@media (max-width: 600px) {
     .lente {
         width: 4.5vw;
         height: 4.5vw;
@@ -174,7 +219,7 @@ body {
     height: 2.5vw;
     cursor: pointer;
     position: absolute;
-    right: 10vw; 
+    right: 8vw; 
     transition: transform 0.3s;
 }
 
@@ -193,8 +238,21 @@ body {
 
 /* RESPONSIVE MENU HAMBURGER */
 
+/* Tablet o schermi medi */
+@media (max-width: 1024px) {
+    .hamburger {
+        width: 4vw;
+        height: 3.5vw;
+        right: 6vw;
+    }
+    
+    .hamburger .bar {
+        height: 0.35vw;
+    }
+}
+
 /* Cellulari o schermi piccoli */
-@media (max-width: 500px) {
+@media (max-width: 600px) {
     .hamburger {
         width: 5vw;
         height: 4.5vw;
@@ -230,13 +288,9 @@ body {
     color: #BDC7FF;
     font-size: 20vw;
     text-align: center; 
-    margin: auto; 
-    margin_right: 3vw;
-    margin-left: 3vw;
+    margin: auto;
     padding-top: 4vw;
     padding-bottom: 2vw;
-    padding-left: 2vw;
-    padding-right: 2vw;
 }
 
 .blocco_1 p {
@@ -248,8 +302,28 @@ body {
 
 /* RESPONSIVE 1 */
 
+/* Tablet o schermi medi */
+@media (max-width: 1024px) {
+    .blocco_1 {
+        margin: 2rem; 
+    }
+
+    .blocco_1 img {
+        padding-top: 8vw; 
+    }
+
+    .titolo h1 {
+        font-size: 10vw; 
+        padding-top: 2vw;
+    }
+
+    .blocco_1 p {
+        font-size: 4vw; 
+    }
+}
+
 /* Cellulari o schermi piccoli */
-@media (max-width: 500px) {
+@media (max-width: 600px) {
     .blocco_1 {
         margin: 1rem; 
         padding: 3vw; 
@@ -306,7 +380,7 @@ body {
     color: #BDC7FF;
     max-width: 100%;
     font-size: 3vw;
-    padding-right: 3vw;
+    padding-right: 10%;
     padding-left: 3vw;
     padding-bottom: 10%;
 }
@@ -316,27 +390,51 @@ body {
     height: auto;
     padding: 2vw;
     padding-right: 2vw;
-    padding-left: 2vw;
-    padding-bottom: 2vw;
 }
 
 
 /* RESPONSIVE 2 */
 
+/* Tablet o schermi medi */
+@media (max-width: 1024px) {
+    .blocco_2 {
+        flex-direction: column; 
+        margin: 2rem; 
+        padding: 5%; 
+    }
+
+    .blocco_2 .testo_2 h2 {
+        font-size: 7vw; 
+        padding-left: 0; 
+        text-align: center; 
+    }
+
+    .blocco_2 .testo_2 p {
+        font-size: 4vw; 
+        padding-right: 0; 
+        padding-left: 0;
+    }
+
+    .blocco_2 img {
+        max-width: 60vw; 
+        padding: 0; 
+    }
+}
+
 /* Cellulari o schermi piccoli */
-@media (max-width: 500px) {
+@media (max-width: 600px) {
     .blocco_2 {
         margin: 1rem; 
         padding: 3vw; 
     }
 
     .blocco_2 .testo_2 h2 {
-        font-size: 1vw; 
+        font-size: 9vw; 
         padding-left: 2vw;
     }
 
     .blocco_2 .testo_2 p {
-        font-size: 1vw; 
+        font-size: 5vw; 
         padding-left: 2vw;
     }
 
@@ -385,27 +483,52 @@ body {
     max-width: 30vw;
     height: auto;
     padding: 2vw;
-    padding-right: 2vw;
     padding-left: 2vw;
-    padding-bottom: 2vw;
 }
 
 
 /* RESPONSIVE 3 */
 
+/* Tablet o schermi medi */
+@media (max-width: 1024px) {
+    .blocco_3 {
+        flex-direction: column; 
+        gap: 2rem;
+        align-items: center; 
+    }
+
+    .blocco_3 .testo_3 h2 {
+        font-size: 6vw; 
+        padding-right: 0;
+        text-align: center; 
+    }
+
+    .blocco_3 .testo_3 p {
+        font-size: 4vw; 
+        padding-left: 0;
+        padding-right: 0;
+        text-align: center; 
+    }
+
+    .blocco_3 img {
+        max-width: 60vw; 
+        padding: 0;
+    }
+}
+
 /* Cellulari o schermi piccoli */
-@media (max-width: 500px) {
+@media (max-width: 600px) {
     .blocco_3 {
         margin: 1rem; 
         padding: 4vw; 
     }
 
     .blocco_3 .testo_3 h2 {
-        font-size: 1vw; 
+        font-size: 8vw; 
     }
 
     .blocco_3 .testo_3 p {
-        font-size: 1vw; 
+        font-size: 5vw; 
     }
 
     .blocco_3 img {
@@ -461,25 +584,49 @@ body {
     height: auto;
     padding: 2vw;
     padding-right: 2vw;
-    padding-left: 2vw;
-    padding-bottom: 2vw;
 }
+
 
 /* RESPONSIVE 4 */
 
+/* Tablet o schermi medi */
+@media (max-width: 1024px) {
+    .blocco_4 {
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+    }
+
+    .blocco_4 .testo_4 h2 {
+        font-size: 6vw;
+        padding-left: 0;
+    }
+
+    .blocco_4 p {
+        font-size: 4vw;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .blocco_4 img {
+        max-width: 60vw;
+        padding: 0;
+    }
+}
+
 /* Cellulari o schermi piccoli  */
-@media (max-width: 500px) {
+@media (max-width: 600px) {
     .blocco_4 {
         margin: 1rem; 
         padding: 3vw; 
     }
 
     .blocco_4 .testo_4 h2 {
-        font-size: 1vw; 
+        font-size: 7vw; 
     }
 
     .blocco_4 .testo_4 p {
-        font-size: 1vw; 
+        font-size: 5vw; 
     }
 
     .blocco_4 img {
@@ -496,8 +643,6 @@ body {
 .blocco_5 {
     background: #263690;
     margin: 3rem;
-    margin-right: 3vw;
-    margin_left: 3vw;
     color: #BDC7FF;
     padding: 1vw; 
     box-sizing: border-box; 
@@ -507,17 +652,25 @@ body {
     text-align: center;
     padding-top: 2vw;
     padding-bottom: 2vw;
-    font-size: 4vw;
+    font-size: 5vw;
 }
 
 /* RESPONSIVE 5 */
 
-/* Cellulari o schermi piccoli */
-@media (max-width: 500px) {
+/* Tablet o schermi medi */
+@media (max-width: 1024px) {
     .frase_finale {
-        font-size: 2vw;
+        font-size: 4.5vw;
+        padding-top: 3vw;
+        padding-bottom: 3vw;
+    }
+}
+
+/* Cellulari o schermi piccoli */
+@media (max-width: 600px) {
+    .frase_finale {
+        font-size: 6vw;
         padding-top: 4vw;
         padding-bottom: 4vw;
     }
 }
-
