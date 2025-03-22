@@ -21,10 +21,21 @@ body {
 
 /* RESPONSIVE INTESTAZIONE */
 
-/* Cellulari o schermi piccoli */
-@media (max-width: 500px) {
+/* Tablet o schermi medi */
+@media (max-width: 1024px) {
     body {
-        font-size: 2vw;
+        font-size: 1.5vw;
+    }
+    .intestazione {
+        margin: 2rem;
+        padding: 1rem;
+    }
+}
+
+/* Cellulari o schermi piccoli */
+@media (max-width: 600px) {
+    body {
+        font-size: 2.5vw;
     }
     .intestazione {
         margin: 1rem;
@@ -50,10 +61,18 @@ body {
 
 /* RESPONSIVE LINK */
 
-/* Cellulari o schermi piccoli */
-@media (max-width: 500px) {
+/* Tablet o schermi medi */
+@media (max-width: 1024px) {
     .intestazione p {
-        font-size: 1vw; 
+        font-size: 12vw; 
+        padding-left: 2vw; 
+    }
+}
+
+/* Cellulari o schermi piccoli */
+@media (max-width: 600px) {
+    .intestazione p {
+        font-size: 15vw; 
         padding-left: 5vw; 
     }
 }
@@ -74,12 +93,21 @@ body {
 
 /* RESPONSIVE MENU DI NAVIGAZIONE */
 
+/* Tablet o schermi medi */
+@media (max-width: 1024px) {
+    .intestazione nav ul {
+        gap: 5vw; 
+        font-size: 4vw; 
+        padding-right: 10vw; 
+    }
+}
+
 /* Cellulari o schermi piccoli */
-@media (max-width: 500px) {
+@media (max-width: 600px) {
     .intestazione nav ul {
         flex-direction: column; 
         gap: 6vw;
-        font-size: 1vw; 
+        font-size: 5vw; 
         padding-right: 0; 
     }
 }
@@ -144,8 +172,25 @@ body {
 
 /* RESPONSIVE LENTE DI INGRANDIMENTO*/
 
+/* Tablet o schermi medi */
+@media (max-width: 1024px) {
+    .lente {
+        width: 3.5vw;
+        height: 3.5vw;
+        border-width: 0.3vw;
+        right: 5vw;
+    }
+    
+    .lente::after {
+        width: 1.2vw;
+        height: 0.25vw;
+        top: 3.6vw;
+        left: 2.2vw;
+    }
+}
+
 /* Cellulari o schermi piccoli */
-@media (max-width: 500px) {
+@media (max-width: 600px) {
     .lente {
         width: 4.5vw;
         height: 4.5vw;
@@ -193,8 +238,21 @@ body {
 
 /* RESPONSIVE MENU HAMBURGER */
 
+/* Tablet o schermi medi */
+@media (max-width: 1024px) {
+    .hamburger {
+        width: 4vw;
+        height: 3.5vw;
+        right: 6vw;
+    }
+    
+    .hamburger .bar {
+        height: 0.35vw;
+    }
+}
+
 /* Cellulari o schermi piccoli */
-@media (max-width: 500px) {
+@media (max-width: 600px) {
     .hamburger {
         width: 5vw;
         height: 4.5vw;
@@ -244,8 +302,28 @@ body {
 
 /* RESPONSIVE 1 */
 
+/* Tablet o schermi medi */
+@media (max-width: 1024px) {
+    .blocco_1 {
+        margin: 2rem; 
+    }
+
+    .blocco_1 img {
+        padding-top: 8vw; 
+    }
+
+    .titolo h1 {
+        font-size: 10vw; 
+        padding-top: 2vw;
+    }
+
+    .blocco_1 p {
+        font-size: 4vw; 
+    }
+}
+
 /* Cellulari o schermi piccoli */
-@media (max-width: 500px) {
+@media (max-width: 600px) {
     .blocco_1 {
         margin: 1rem; 
         padding: 3vw; 
@@ -317,20 +395,46 @@ body {
 
 /* RESPONSIVE 2 */
 
+/* Tablet o schermi medi */
+@media (max-width: 1024px) {
+    .blocco_2 {
+        flex-direction: column; 
+        margin: 2rem; 
+        padding: 5%; 
+    }
+
+    .blocco_2 .testo_2 h2 {
+        font-size: 7vw; 
+        padding-left: 0; 
+        text-align: center; 
+    }
+
+    .blocco_2 .testo_2 p {
+        font-size: 4vw; 
+        padding-right: 0; 
+        padding-left: 0;
+    }
+
+    .blocco_2 img {
+        max-width: 60vw; 
+        padding: 0; 
+    }
+}
+
 /* Cellulari o schermi piccoli */
-@media (max-width: 500px) {
+@media (max-width: 600px) {
     .blocco_2 {
         margin: 1rem; 
         padding: 3vw; 
     }
 
     .blocco_2 .testo_2 h2 {
-        font-size: 2vw; 
+        font-size: 9vw; 
         padding-left: 2vw;
     }
 
     .blocco_2 .testo_2 p {
-        font-size: 1vw; 
+        font-size: 5vw; 
         padding-left: 2vw;
     }
 
@@ -385,19 +489,46 @@ body {
 
 /* RESPONSIVE 3 */
 
+/* Tablet o schermi medi */
+@media (max-width: 1024px) {
+    .blocco_3 {
+        flex-direction: column; 
+        gap: 2rem;
+        align-items: center; 
+    }
+
+    .blocco_3 .testo_3 h2 {
+        font-size: 6vw; 
+        padding-right: 0;
+        text-align: center; 
+    }
+
+    .blocco_3 .testo_3 p {
+        font-size: 4vw; 
+        padding-left: 0;
+        padding-right: 0;
+        text-align: center; 
+    }
+
+    .blocco_3 img {
+        max-width: 60vw; 
+        padding: 0;
+    }
+}
+
 /* Cellulari o schermi piccoli */
-@media (max-width: 500px) {
+@media (max-width: 600px) {
     .blocco_3 {
         margin: 1rem; 
         padding: 4vw; 
     }
 
     .blocco_3 .testo_3 h2 {
-        font-size: 2vw; 
+        font-size: 8vw; 
     }
 
     .blocco_3 .testo_3 p {
-        font-size: 1vw; 
+        font-size: 5vw; 
     }
 
     .blocco_3 img {
@@ -458,19 +589,44 @@ body {
 
 /* RESPONSIVE 4 */
 
+/* Tablet o schermi medi */
+@media (max-width: 1024px) {
+    .blocco_4 {
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+    }
+
+    .blocco_4 .testo_4 h2 {
+        font-size: 6vw;
+        padding-left: 0;
+    }
+
+    .blocco_4 p {
+        font-size: 4vw;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .blocco_4 img {
+        max-width: 60vw;
+        padding: 0;
+    }
+}
+
 /* Cellulari o schermi piccoli  */
-@media (max-width: 500px) {
+@media (max-width: 600px) {
     .blocco_4 {
         margin: 1rem; 
         padding: 3vw; 
     }
 
     .blocco_4 .testo_4 h2 {
-        font-size: 2vw; 
+        font-size: 7vw; 
     }
 
     .blocco_4 .testo_4 p {
-        font-size: 1vw; 
+        font-size: 5vw; 
     }
 
     .blocco_4 img {
@@ -501,12 +657,20 @@ body {
 
 /* RESPONSIVE 5 */
 
-/* Cellulari o schermi piccoli */
-@media (max-width: 500px) {
+/* Tablet o schermi medi */
+@media (max-width: 1024px) {
     .frase_finale {
-        font-size: 2vw;
+        font-size: 4.5vw;
+        padding-top: 3vw;
+        padding-bottom: 3vw;
+    }
+}
+
+/* Cellulari o schermi piccoli */
+@media (max-width: 600px) {
+    .frase_finale {
+        font-size: 6vw;
         padding-top: 4vw;
         padding-bottom: 4vw;
     }
 }
-
