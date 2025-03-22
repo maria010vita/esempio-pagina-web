@@ -1,0 +1,677 @@
+body {
+    background-color: #BDC7FF;
+    color: #BDC7FF;
+    font-family: inherit;
+    font-size: 1.25vw;
+    margin: 0%;
+    padding: 0%;
+    text-align: left;
+}
+
+/* INTESTAZIONE */
+.intestazione {
+    background: #263690;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 3rem;
+    padding: 1rem 2rem;
+    flex-wrap: wrap;
+}
+
+/* RESPONSIVE INTESTAZIONE */
+
+/* Tablet o schermi medi */
+@media (max-width: 1024px) {
+    body {
+        font-size: 1.5vw;
+    }
+    .intestazione {
+        margin: 2rem;
+        padding: 1rem;
+    }
+}
+
+/* Cellulari o schermi piccoli */
+@media (max-width: 600px) {
+    body {
+        font-size: 2.5vw;
+    }
+    .intestazione {
+        margin: 1rem;
+        padding: 0.5rem;
+    }
+}
+
+
+
+
+
+/* TESTO DELL'INTESTAZIONE (>link) */
+.intestazione p {
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 10vw;
+    color: #BDC7FF;
+    margin: 0%;
+    padding-top: 3%;
+    padding-bottom: 3%;
+    padding-left: 3%;
+}
+
+/* RESPONSIVE LINK */
+
+/* Tablet o schermi medi */
+@media (max-width: 1024px) {
+    .intestazione p {
+        font-size: 12vw; 
+        padding-left: 2vw; 
+    }
+}
+
+/* Cellulari o schermi piccoli */
+@media (max-width: 600px) {
+    .intestazione p {
+        font-size: 15vw; 
+        padding-left: 5vw; 
+    }
+}
+
+
+
+
+
+/* MENU DI NAVIGAZIONE */
+.intestazione nav ul {
+    text-align: center;
+    list-style: none;
+    display: flex;
+    gap: 3vw;
+    font-size: 3vw; 
+    padding-right: 20vw;
+}
+
+/* RESPONSIVE MENU DI NAVIGAZIONE */
+
+/* Tablet o schermi medi */
+@media (max-width: 1024px) {
+    .intestazione nav ul {
+        gap: 5vw; 
+        font-size: 4vw; 
+        padding-right: 10vw; 
+    }
+}
+
+/* Cellulari o schermi piccoli */
+@media (max-width: 600px) {
+    .intestazione nav ul {
+        flex-direction: column; 
+        gap: 6vw;
+        font-size: 5vw; 
+        padding-right: 0; 
+    }
+}
+
+
+
+
+
+/* LINK E MENU DI NAVIGAZIONE > GIALLI*/
+
+/* LINK */
+.intestazione a {
+    text-decoration: none;
+    color: #BDC7FF;
+    transition: color 0.3s, text-decoration 0.3s; 
+}
+
+/* MENU DI NAVIGAZIONE */
+.intestazione nav a:hover {
+    color: #CEB556;
+    text-decoration: underline;
+}
+
+
+
+
+
+/* LENTE DI INGRANDIMENTO */
+.lente {
+    width: 2.5vw;
+    height: 2.5vw;
+    border: 0.25vw solid #BDC7FF;
+    border-radius: 50%;
+    background-color: transparent;
+    position: absolute;
+    right: 6vw; /* Allineata a destra */
+    cursor: pointer;
+    transition: border-color 0.3s, background-color 0.3s;
+    margin-right: 10vw;
+}
+
+/* MANICO DELLA LENTE */
+.lente::after {
+    content: '';
+    position: absolute;
+    width: 1vw;
+    height: 0.20vw;
+    background-color: #BDC7FF;
+    top: 2.8vw;
+    left: 1.7vw;
+    transform: rotate(60deg);
+    transition: background-color 0.3s;
+}
+
+/* LENTE DI INGRANDIMENTO > GIALLA */
+.lente:hover,
+.lente:hover::after {
+    border-color: #CEB556;
+    background-color: #CEB556;
+}
+
+
+/* RESPONSIVE LENTE DI INGRANDIMENTO*/
+
+/* Tablet o schermi medi */
+@media (max-width: 1024px) {
+    .lente {
+        width: 3.5vw;
+        height: 3.5vw;
+        border-width: 0.3vw;
+        right: 5vw;
+    }
+    
+    .lente::after {
+        width: 1.2vw;
+        height: 0.25vw;
+        top: 3.6vw;
+        left: 2.2vw;
+    }
+}
+
+/* Cellulari o schermi piccoli */
+@media (max-width: 600px) {
+    .lente {
+        width: 4.5vw;
+        height: 4.5vw;
+        border-width: 0.35vw;
+        right: 4vw;
+    }
+    
+    .lente::after {
+        width: 1.5vw;
+        height: 0.3vw;
+        top: 4.5vw;
+        left: 2.8vw;
+    }
+}
+
+
+
+
+
+/* MENU HAMBURGER */
+.hamburger {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 3vw;
+    height: 2.5vw;
+    cursor: pointer;
+    position: absolute;
+    right: 8vw; 
+    transition: transform 0.3s;
+}
+
+.hamburger .bar {
+    height: 0.25vw;
+    width: 100%;
+    background-color: #BDC7FF;
+    transition: background-color 0.3s;
+}
+
+/* MENU HAMBURGER > GIALLA */
+.hamburger:hover .bar {
+    background-color: #CEB556;
+}
+
+
+/* RESPONSIVE MENU HAMBURGER */
+
+/* Tablet o schermi medi */
+@media (max-width: 1024px) {
+    .hamburger {
+        width: 4vw;
+        height: 3.5vw;
+        right: 6vw;
+    }
+    
+    .hamburger .bar {
+        height: 0.35vw;
+    }
+}
+
+/* Cellulari o schermi piccoli */
+@media (max-width: 600px) {
+    .hamburger {
+        width: 5vw;
+        height: 4.5vw;
+        right: 4vw;
+    }
+    
+    .hamburger .bar {
+        height: 0.45vw;
+    }
+}
+
+
+
+
+
+/* SLIDE 1 */
+
+.blocco_1 {
+    background: #263690;
+    margin: 3rem;
+    padding: 1rem;
+    color: #BDC7FF;
+    text-align: center;
+}
+
+.blocco_1 img {
+    width: 90%;
+    height: auto;
+    padding-top: 5vw;
+}
+
+.titolo h1 {
+    color: #BDC7FF;
+    font-size: 20vw;
+    text-align: center; 
+    margin: auto;
+    padding-top: 4vw;
+    padding-bottom: 2vw;
+}
+
+.blocco_1 p {
+    font-size: 5vw;
+    text-align: center;
+    padding-bottom: 2vw;
+}
+
+
+/* RESPONSIVE 1 */
+
+/* Tablet o schermi medi */
+@media (max-width: 1024px) {
+    .blocco_1 {
+        margin: 2rem; 
+    }
+
+    .blocco_1 img {
+        padding-top: 8vw; 
+    }
+
+    .titolo h1 {
+        font-size: 10vw; 
+        padding-top: 2vw;
+    }
+
+    .blocco_1 p {
+        font-size: 4vw; 
+    }
+}
+
+/* Cellulari o schermi piccoli */
+@media (max-width: 600px) {
+    .blocco_1 {
+        margin: 1rem; 
+        padding: 3vw; 
+    }
+
+    .blocco_1 img {
+        padding-top: 10vw; 
+    }
+
+    .titolo h1 {
+        font-size: 12vw; 
+        padding-top: 3vw;
+    }
+
+    .blocco_1 p {
+        font-size: 6vw; 
+    }
+}
+
+
+
+
+
+/* SLIDE 2 < L'ANIMAZIONE OLTRE L'INFANZIA */
+
+body {
+    background-color: #BDC7FF;
+    color: #BDC7FF;
+    font-family: inherit;
+    margin: 0;
+    padding: 0;
+    text-align: left; 
+}
+
+.blocco_2 {
+    background: #263690;
+    margin: 3rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1vw;
+    padding: 2vw;
+}
+
+.blocco_2 .testo_2 h2 {
+    color: #BDC7FF;
+    font-size: 5vw;
+    padding-top: 10%;
+    padding-left: 3vw;
+}
+
+.blocco_2 .testo_2 p {
+    color: #BDC7FF;
+    max-width: 100%;
+    font-size: 3vw;
+    padding-right: 10%;
+    padding-left: 3vw;
+    padding-bottom: 10%;
+}
+
+.blocco_2 img {
+    max-width: 30vw;
+    height: auto;
+    padding: 2vw;
+    padding-right: 2vw;
+}
+
+
+/* RESPONSIVE 2 */
+
+/* Tablet o schermi medi */
+@media (max-width: 1024px) {
+    .blocco_2 {
+        flex-direction: column; 
+        margin: 2rem; 
+        padding: 5%; 
+    }
+
+    .blocco_2 .testo_2 h2 {
+        font-size: 7vw; 
+        padding-left: 0; 
+        text-align: center; 
+    }
+
+    .blocco_2 .testo_2 p {
+        font-size: 4vw; 
+        padding-right: 0; 
+        padding-left: 0;
+    }
+
+    .blocco_2 img {
+        max-width: 60vw; 
+        padding: 0; 
+    }
+}
+
+/* Cellulari o schermi piccoli */
+@media (max-width: 600px) {
+    .blocco_2 {
+        margin: 1rem; 
+        padding: 3vw; 
+    }
+
+    .blocco_2 .testo_2 h2 {
+        font-size: 9vw; 
+        padding-left: 2vw;
+    }
+
+    .blocco_2 .testo_2 p {
+        font-size: 5vw; 
+        padding-left: 2vw;
+    }
+
+    .blocco_2 img {
+        max-width: 80vw; 
+        height: auto;
+        padding: 0; 
+    }
+}
+
+
+
+
+/* SLIDE 3 > L'ANIMAZIONE D'AUTORE NEL MONDO */
+
+.blocco_3 {
+    background: #263690;
+    margin: 3rem;
+    color: #BDC7FF;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 2vw;
+    gap: 1vw;
+}
+
+
+.blocco_3 .testo_3 h2 {
+    text-align: right;
+    font-size: 5vw;
+    padding-top: 10%;
+    padding-right: 3vw;
+}
+
+.blocco_3 .testo_3 p {
+    max-width: 100%;
+    text-align: right;
+    font-size: 3vw;
+    padding-right: 3vw;
+    padding-left: 10%;
+    padding-bottom: 10%;
+}
+
+.blocco_3 img {
+    max-width: 30vw;
+    height: auto;
+    padding: 2vw;
+    padding-left: 2vw;
+}
+
+
+/* RESPONSIVE 3 */
+
+/* Tablet o schermi medi */
+@media (max-width: 1024px) {
+    .blocco_3 {
+        flex-direction: column; 
+        gap: 2rem;
+        align-items: center; 
+    }
+
+    .blocco_3 .testo_3 h2 {
+        font-size: 6vw; 
+        padding-right: 0;
+        text-align: center; 
+    }
+
+    .blocco_3 .testo_3 p {
+        font-size: 4vw; 
+        padding-left: 0;
+        padding-right: 0;
+        text-align: center; 
+    }
+
+    .blocco_3 img {
+        max-width: 60vw; 
+        padding: 0;
+    }
+}
+
+/* Cellulari o schermi piccoli */
+@media (max-width: 600px) {
+    .blocco_3 {
+        margin: 1rem; 
+        padding: 4vw; 
+    }
+
+    .blocco_3 .testo_3 h2 {
+        font-size: 8vw; 
+    }
+
+    .blocco_3 .testo_3 p {
+        font-size: 5vw; 
+    }
+
+    .blocco_3 img {
+        max-width: 80vw; 
+    }
+}
+
+
+
+
+
+/* SLIDE 4 > L'ANIMAZIONE D'AUTORE IN ITALIA*/
+
+body {
+    background-color: #BDC7FF;
+    color: #BDC7FF;
+    font-family: inherit;
+    margin: 0;
+    padding: 0;
+    text-align: left; 
+}
+
+.blocco_4 {
+    background: #263690;
+    margin: 3rem;
+    color: #BDC7FF;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1vw;
+    padding: 2vw;
+}
+
+.blocco_4 .testo_4 h2 {
+    color: #BDC7FF;
+    font-size: 5vw;
+    padding-top: 10%;
+    padding-left: 3vw;
+}
+
+.blocco_4 .testo_4 p {
+    color: #BDC7FF;
+    max-width: 100%;
+    font-size: 3vw;
+    padding-right: 10%;
+    padding-left: 3vw;
+    padding-bottom: 10%;
+}
+
+.blocco_4 img {
+    max-width: 30vw;
+    height: auto;
+    padding: 2vw;
+    padding-right: 2vw;
+}
+
+
+/* RESPONSIVE 4 */
+
+/* Tablet o schermi medi */
+@media (max-width: 1024px) {
+    .blocco_4 {
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+    }
+
+    .blocco_4 .testo_4 h2 {
+        font-size: 6vw;
+        padding-left: 0;
+    }
+
+    .blocco_4 p {
+        font-size: 4vw;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .blocco_4 img {
+        max-width: 60vw;
+        padding: 0;
+    }
+}
+
+/* Cellulari o schermi piccoli  */
+@media (max-width: 600px) {
+    .blocco_4 {
+        margin: 1rem; 
+        padding: 3vw; 
+    }
+
+    .blocco_4 .testo_4 h2 {
+        font-size: 7vw; 
+    }
+
+    .blocco_4 .testo_4 p {
+        font-size: 5vw; 
+    }
+
+    .blocco_4 img {
+        max-width: 80vw; 
+    }
+}
+
+
+
+
+
+/* SLIDE 5 - FINE */
+
+.blocco_5 {
+    background: #263690;
+    margin: 3rem;
+    color: #BDC7FF;
+    padding: 1vw; 
+    box-sizing: border-box; 
+}
+
+.frase_finale {
+    text-align: center;
+    padding-top: 2vw;
+    padding-bottom: 2vw;
+    font-size: 5vw;
+}
+
+/* RESPONSIVE 5 */
+
+/* Tablet o schermi medi */
+@media (max-width: 1024px) {
+    .frase_finale {
+        font-size: 4.5vw;
+        padding-top: 3vw;
+        padding-bottom: 3vw;
+    }
+}
+
+/* Cellulari o schermi piccoli */
+@media (max-width: 600px) {
+    .frase_finale {
+        font-size: 6vw;
+        padding-top: 4vw;
+        padding-bottom: 4vw;
+    }
+}
+
